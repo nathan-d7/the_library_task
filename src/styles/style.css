@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@import './variables.css';
+@import './global.css';
+@import './search.css';
+@import './cards.css';
+@import './sidebar.css';
+
+.app {
+  min-height: 100vh;
+  background-color: var(--background);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-content: stretch;
+}
+
+.container,
+.header__container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 90%;
+}
+
+/*header styles*/
+
+.header {
+  height: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding-block: 6px;
+}
+ 
+.header__logo-box {
+  display: inline-block;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--green);
+}
+
+.header__logo-box svg {
+  flex: 1;
+}
+
+.header__logo-text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-text.text-highlighted-bold {
+  font-size: 18px;
+}
+
+.header__logo-text--sub {
+  font-size: 14px;
+}
+
+/*styles for the main section*/
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr minmax(250px, 280px);
+  grid-template-rows: max-content auto;
+  row-gap: 50px;
+  grid-template-areas: 
+    "search search"
+    "books favourites";
+  padding-bottom: 40px;
+}
+
+/*books section styles*/
+
+.books-section {
+  grid-area: books;
+  margin-right: 20px;
+}
+
+.books__list {
+  display: flex;
+  gap: 6px;
+}
+
+/*footer styles*/
+
+.footer {
+  padding-block: 25px;
+  border-top: 1px solid var(--border)
+}
+
+.footer__link,
+.footer__link:visited {
+  color: var(--green);
+}
+
+.footer__box {
+  text-align: center;
+}

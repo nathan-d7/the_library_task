@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--black);
+  font-size: 14px;
+}
+
+input, button {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.text-highlighted-bold {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}

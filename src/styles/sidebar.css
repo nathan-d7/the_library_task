@@ -1,0 +1,31 @@
+.favor-section {
+  background-color: var(--white);
+  border-radius: 8px;
+  grid-area: favourites;
+}
+
+.favor__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.favor__icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #b8cec3;
+}
+
+.favor__icon svg {
+  stroke: var(--green);
+}
+
+.favor__text-item.text-highlighted-bold {
+  font-size: 16px;
+}
