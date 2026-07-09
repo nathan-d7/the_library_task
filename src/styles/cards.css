@@ -1,0 +1,79 @@
+.books__card {
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px var(--shadow);
+}
+
+.books__card-cover-box,
+.books__card-cover {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.books__card-cover-box {
+  height: 250px;
+  min-height: 250px;
+  position: relative;  
+  background-color: var(--green);
+}
+
+.books__card-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.books__card-cover-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.books__card-cover-placeholder--icon {
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+}
+
+
+.books__liked-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--background);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.books__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 12px;
+  background-color: var(--card);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.books__title {
+  font-weight: 600;
+}
+
+.books__author {
+  margin: 0 0 auto 0;
+}
+
+.books__year {
+  font-weight: 400;
+}
