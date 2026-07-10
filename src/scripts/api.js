@@ -14,12 +14,14 @@ export async function fetchBooks(query) {
     }
 
     const data = await response.json()
+
+    console.log(data.docs)
   
     return data.docs || []
 
   } catch (error) {
     console.error('Failed to fetch books from Open Library', error.message)
-    return []
+    return null
   }
 
 }

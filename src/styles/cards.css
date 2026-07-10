@@ -54,6 +54,16 @@
   cursor: pointer;
 }
 
+.books__liked-icon:hover svg {
+  fill: #c94a4a;
+}
+
+.books__liked-icon--active svg, 
+.books__liked-icon--active svg path {
+  fill: #c94a4a;
+  stroke: #c94a4a;
+}
+
 .books__info {
   flex-grow: 1;
   display: flex;

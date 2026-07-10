@@ -4,6 +4,7 @@
 @import './search.css';
 @import './cards.css';
 @import './sidebar.css';
+@import './favCards.css';
 
 .app {
   min-height: 100vh;
@@ -76,7 +77,10 @@
   padding-bottom: 40px;
 }
 
-/*books section styles*/
+/* 
+  books section styles for its state and the possible content
+  depending on the API response and empty query search
+*/
 
 .books-section {
   grid-area: books;
@@ -87,26 +91,33 @@
   gap: 8px;
 }
 
+.books__search--empty-container {
+  display: flex;
+}
+
 .books__loading-container,
 .books__search--empty-container,
-.books__search--empty-query-container {
+.books__search--empty-query-container,
+.books-api__fail-container {
   min-height: 100%;
   background-color: var(--secondary);
-  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-radius: 8px;
   box-shadow: 1px 2px 6px var(--shadow);
 }
 
 .books__loading-container,
-.books__search--empty-query-container {
+.books__search--empty-query-container,
+.books-api__fail-container  {
   display: none;
 }
 
 .books__loading-text,
 .books__search--empty-text,
-.books__search--empty-query-text {
+.books__search--empty-query-text,
+.books-api__fail-text {
   font-style: italic;
 }
 
@@ -135,12 +146,13 @@
   font-size: 20px;
 }
 
-
-.books__search--empty-query-text {
+.books__search--empty-query-text,
+.books-api__fail-text {
   color: rgb(211, 38, 38);
   font-weight: 600;
   font-size: 18px;
 }
+
 
 /*footer styles*/
 

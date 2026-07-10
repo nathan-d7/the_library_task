@@ -1,0 +1,62 @@
+.favor-books-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 12px;
+}
+
+.favor-book-link {
+  display: block;
+}
+
+.favor__book {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
+.favor__book:not(:last-child) {
+  border-bottom: 2px solid var(--border);
+}
+
+.favor__book-cover-box {
+  display: block;
+  margin-right: 10px;
+  width: 70px;
+  height: 100px;
+  background-color: #dfdcdc;
+  border-radius: 4px;
+}
+
+.favor__book-cover {
+  object-fit: cover;
+  width: 70px;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.favor__book-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4px;
+}
+
+.favor__book-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.favor__book-year {
+  font-weight: 400;
+}
+
+.favor__book-liked-icon-box {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+
