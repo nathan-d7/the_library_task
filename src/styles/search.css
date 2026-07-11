@@ -98,12 +98,7 @@
 
   .search__description {
     text-align: start;
+    width: 90%;
   }
 }
 
-@media(max-width: 480px) {
-  .search__description {
-    width: 90%;
-  }
-  
-}
