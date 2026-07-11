@@ -1,5 +1,7 @@
-export async function fetchBooks(query) {
-  const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`
+export async function fetchBooks(query, searchMode = 'all') {
+
+  const searchParam = searchMode === 'author' ? 'author' : 'q'
+  const url = `https://openlibrary.org/search.json?${searchParam}=${encodeURIComponent(query)}&limit=10`
 
   try {
     const response = await fetch(url, {

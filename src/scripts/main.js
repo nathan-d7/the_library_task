@@ -11,6 +11,8 @@ const loader = document.querySelector('.books__loading-container')
 const emptySearchQuery = document.querySelector('.books__search--empty-query-container')
 const favorBooksList = document.querySelector('.favor-books-list')
 const apiFailedBlock = document.querySelector('.books-api__fail-container')
+const searchModeElement = document.querySelector('.search__mode-select-box')
+
 
 let currentBooks = []
 
@@ -31,7 +33,8 @@ function init() {
 
     e.preventDefault()
     const query = searchInput.value.trim()
-
+    const searchMode = searchModeElement.value
+   
     if (!query) {
       showActiveContainer(emptySearchQuery)
       return
@@ -39,7 +42,7 @@ function init() {
 
     showActiveContainer(loader)
     searchInput.value = ''
-    const books = await fetchBooks(query)
+    const books = await fetchBooks(query, searchMode)
     loader.style.display = 'none'
 
     if(!books) {
