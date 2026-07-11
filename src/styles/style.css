@@ -169,3 +169,48 @@
 .footer__box {
   text-align: center;
 }
+
+
+@media(max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(200px, 1fr) auto;
+    grid-template-areas: 
+      "search"
+      "books"
+      "favourites"
+    ;
+    row-gap: 80px;
+    column-gap: 0;
+  }
+
+  .books__loading-container,
+  .books__search--empty-container,
+  .books__search--empty-query-container,
+  .books-api__fail-container {
+    padding: 16px;
+  }
+
+}
+
+@media(max-width: 480px) {
+  .container,
+  .header__container {
+    width: 92%;
+  }
+
+  .books__list {
+    justify-content: center;
+  }
+  
+}
+
+@media(max-width: 400px) {
+  .books-section {
+    justify-self: center;
+  }
+
+  .books__list {
+    row-gap: 16px;
+  }
+}

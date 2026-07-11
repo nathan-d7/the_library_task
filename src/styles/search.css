@@ -59,3 +59,51 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .search__heading.search__heading.text-highlighted-bold {
+    font-size: 35px;
+  }
+
+  .search__description {
+    width: 60%;
+  }
+
+  .search__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .search__input {
+    height: 40px;
+  }
+
+  .search__input-box {
+    width: 100%;
+  }
+
+  .search__button {
+    font-size: 16px;
+  }
+
+}
+
+@media(max-width: 640px) {
+  .search-section {
+    align-items: flex-start;
+  }
+
+  .search__description {
+    text-align: start;
+  }
+}
+
+@media(max-width: 480px) {
+  .search__description {
+    width: 90%;
+  }
+  
+}
