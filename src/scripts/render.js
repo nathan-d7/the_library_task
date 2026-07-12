@@ -6,11 +6,20 @@ const loader = document.querySelector('.books__loading-container')
 const favouritesList = document.querySelector('.favor-books-list')
 const favouritesListCounter = document.querySelector('.favor__items-counter')
 
+// A function to handle empty / empty search / errors container
 export function showActiveContainer(targetContainer) {
 
   booksSection.innerHTML = ''
+  const currentFavs = getFavourites()
 
   if (targetContainer) {
+    
+    if(currentFavs.length > 0) {
+      booksSection.classList.add('self-start')
+    } else {
+      booksSection.classList.remove('self-start')
+    }
+    
     targetContainer.style.display = 'flex'
     booksSection.append(targetContainer)
   }
@@ -21,6 +30,10 @@ function createBookCard(book, favourites) {
   const hasCover = Boolean(book.cover_i)
   const bookCoverLink = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
 
+  /*
+    Defining the flag making sure if a book is added to the favourites - 
+    it keeps the like icon active
+  */ 
   let isLiked = favourites.find(fav => fav.key === book.key)
 
   const bookCard = `
@@ -91,9 +104,14 @@ function createFavBookCard(favBook, favourites) {
 
 export function renderBooks(books) {
 
+  // Emptying the book section before rendering a new set of books
   showActiveContainer(null)
   booksList.style.display = 'grid'
 
+  /*
+    Gettign an array of liked books to pass it to CreateBookCard and 
+    check which book cards have the like icon activated
+  */ 
   const currentFavs = getFavourites()
 
   const htmlList = books.map(book => createBookCard(book, currentFavs))
@@ -104,13 +122,15 @@ export function renderBooks(books) {
 
 export function renderFavBooks(favBooks) {
 
-  if (!favBooks) {
-    favouritesList.innerHTML = `<p class="favor-books-list--empty">Your favourite books list is empty</p>`
+  if (!favBooks.length) {
+    console.log(favBooks)
+    favouritesList.innerHTML = `<li class="favor-books-list--empty text">Your favourite books list is empty</li>`
+    favouritesListCounter.textContent = '0'
     return
   }
 
   const currentFavs = getFavourites()
-
+  // Updating the counter of the favourites
   favouritesListCounter.textContent = favBooks.length
 
   const htmlList = favBooks.map(book => createFavBookCard(book, currentFavs))

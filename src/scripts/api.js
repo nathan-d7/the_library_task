@@ -1,5 +1,6 @@
 export async function fetchBooks(query, searchMode = 'all') {
 
+  // Tailoring the url param depending on the search mode 
   const searchParam = searchMode === 'author' ? 'author' : 'q'
   const url = `https://openlibrary.org/search.json?${searchParam}=${encodeURIComponent(query)}&limit=10`
 

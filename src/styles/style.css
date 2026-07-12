@@ -68,7 +68,7 @@
 .main {
   display: grid;
   grid-template-columns: 1fr minmax(220px, 250px);
-  grid-template-rows: max-content auto;
+  grid-template-rows: max-content min-content;
   row-gap: 50px;
   column-gap: 10px;
   grid-template-areas: 
@@ -89,6 +89,11 @@
 .books__list {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 8px;
+  display: flex;
+}
+
+.self-start {
+  align-self: start;
 }
 
 .books__search--empty-container {
@@ -99,7 +104,8 @@
 .books__search--empty-container,
 .books__search--empty-query-container,
 .books-api__fail-container {
-  min-height: 250px;
+  height: 100%;
+  min-height: 200px;
   background-color: var(--secondary);
   justify-content: center;
   align-items: center;
