@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  background-color: #b8cec3;
+  background-color: var(--lightgreen);
 }
 
 .favor__icon svg {

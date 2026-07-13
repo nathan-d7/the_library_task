@@ -2,6 +2,7 @@ import '../styles/style.css'
 import { fetchBooks } from './api'
 import { renderBooks, showActiveContainer, renderFavBooks } from './render'
 import { toggleFavourite, getFavourites } from './storage'
+import { initTheme } from './theme'
 
 const searchForm = document.querySelector('.search__box')
 const searchInput = document.querySelector('.search__input')
@@ -18,6 +19,8 @@ const searchModeElement = document.querySelector('.search__mode-select-box')
 let currentBooks = []
 
 function init() {
+
+  initTheme()
 
   // Getting the data from the local storage
   const initialFavs = getFavourites()

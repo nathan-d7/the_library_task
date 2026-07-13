@@ -3,8 +3,12 @@
   --green: #27694d;
   --yellow: #daa520;
   --red: #ef4444;
+  --liked: #c94a4a;
   --brown: #383129;
   --black: #2a2622;
+  --themeswitch: #0b295c;
+  --themeswitchback: #234889;
+  --lightgreen: #b8cec3;
 
   --title: #2b2622;
   --text: #7c736a;
@@ -15,4 +19,26 @@
   --secondary: #eeebe4;
   --shadow: #c4b8a8;
   --favorite: #eaf0ed;
+  --warning: #c51818;
+}
+
+/*variables for the dark theme*/
+
+[data-theme="dark"] {
+  --green: #db88ca;
+  --lightgreen: #cd5ab6;
+  --white: #1E1E1E;
+  --themeswitch: #dadada;
+  --themeswitchback: #f0ede5;
+
+  --title: #e4e4e4;
+  --text: #f8f6f1;
+  --border: #333333;
+
+  --background: #121212;
+  --card: #2A2A2A;
+  --secondary: #1E1E1E;
+  --shadow: #c4b8a8;
+  --favorite: #232222;
+  --warning: #d02c55;
 }

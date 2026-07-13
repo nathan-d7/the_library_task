@@ -31,5 +31,6 @@ ul {
 .text-highlighted-bold {
   font-family: "Playfair Display", serif;
   font-weight: 600;
+  color: var(--title);
 }
 

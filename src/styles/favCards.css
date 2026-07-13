@@ -54,6 +54,7 @@
   font-family: "Playfair Display", sans-serif;
   font-size: 15px;
   font-weight: 600;
+  color: var(--title);
 }
 
 .favor__book-year {

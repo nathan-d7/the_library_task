@@ -7,6 +7,10 @@
   grid-area: search;
 }
 
+.search__heading {
+  color: var(--title);
+}
+
 .search__heading.text-highlighted-bold {
   font-size: 40px;
 }
@@ -47,14 +51,11 @@
   height: 100%;
   min-width: 100%;
   font-size: 15px;
+  background-color: var(--white);
 }
 
 .search__input:focus {
   outline: 3px solid var(--green);
-}
-
-.search__mode-select-box {
-  height: 100%;
 }
 
 .search__button {
@@ -77,13 +78,15 @@
 }
 
 .search__mode-select-box {
+  height: 100%;
   border: none;
   font-family: "Source Sans 3", sans-serif;
   background-color: var(--favorite);
+  color: var(--text);
   text-align: center;
   font-weight: 600;
   font-size: 16px;
-  box-shadow: 1px 2px 8px var(--shadow);
+  box-shadow: 1px 2px 6px var(--shadow);
   border-radius: 8px;
   width: 80px;
   padding-block: 10px;

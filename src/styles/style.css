@@ -34,19 +34,24 @@
   height: 100%;
   padding-block: 6px;
 }
- 
+
 .header__logo-box {
-  display: inline-block;
-  width: 50px;
-  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+ 
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   background-color: var(--green);
 }
 
-.header__logo-box svg {
+.header__logo svg {
   flex: 1;
 }
 
@@ -154,11 +159,10 @@
 
 .books__search--empty-query-text,
 .books-api__fail-text {
-  color: rgb(211, 38, 38);
+  color: var(--warning);
   font-weight: 600;
   font-size: 18px;
 }
-
 
 /*footer styles*/
 
@@ -176,6 +180,33 @@
   text-align: center;
 }
 
+/*dark theme styles*/ 
+
+.toggle-theme-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  background-color: transparent;
+  width: 50px;
+  height: 30px;
+  border: 3px solid var(--themeswitch);
+  border-radius: 4px;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+.toggle-theme-button:hover {
+  background-color: var(--themeswitchback);
+}
+
+.toggle-theme-button:hover .toggle-theme-icon {
+  fill: var(--yellow);
+  stroke: var(--yellow);
+}
+
+.toggle-theme-icon {
+  fill: var(--themeswitch)
+}
 
 @media(max-width: 768px) {
   .main {
@@ -215,6 +246,16 @@
   .main {
     row-gap: 40px;
   }
+
+  .header {
+    height: auto;
+  }
+
+  .header__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 
   .books-section {
     justify-self: center;

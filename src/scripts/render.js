@@ -1,4 +1,5 @@
 import { getFavourites } from "./storage"
+import bookPlaceholder from '../../assets/icons/book.svg'
 
 let booksList = document.querySelector('.books__list')
 const booksSection = document.querySelector('.books-section')
@@ -45,7 +46,7 @@ function createBookCard(book, favourites) {
       `<img class="books__card-cover" src="${bookCoverLink}" alt="${book.title}" />`
       :
       `<div class="books__card-cover-placeholder">
-          <img class="books__card-cover-placeholder--icon" src="../../assets/icons/book.svg" alt="No cover" />
+          <img class="books__card-cover-placeholder--icon" src="${bookPlaceholder}" alt="No cover" />
         </div>`
     }
 
@@ -78,7 +79,7 @@ function createFavBookCard(favBook, favourites) {
     <li class="favor__book" data-id="${favBook.key}">
 
       <a href="https://openlibrary.org/${favBook.key}" class="favor__book-cover-box" target="_blank">
-        <img class="favor__book-cover" src="${hasCover ? cover : './assets/icons/book.svg'}" alt="No cover">
+        <img class="favor__book-cover" src="${hasCover ? cover : bookPlaceholder}" alt="No cover">
       </a>
 
       <div class="favor__book-info">
