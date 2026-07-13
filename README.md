@@ -5,6 +5,8 @@ The app features real time book-search, select by author filter, app theme manag
 
 **Task:** https://drive.google.com/file/d/1RBRcuH-_oAvtjem5Xs0c4NXZ8I38aYyH/view?usp=sharing
 
+**GitHub Pages:** https://nathan-d7.github.io/the_library_task/
+
 **How to run the app:**
 
 1. Make sure you have Node.js installed on your machine.
