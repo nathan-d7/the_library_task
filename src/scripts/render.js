@@ -79,7 +79,7 @@ function createFavBookCard(favBook, favourites) {
     <li class="favor__book" data-id="${favBook.key}">
 
       <a href="https://openlibrary.org/${favBook.key}" class="favor__book-cover-box" target="_blank">
-        <img class="favor__book-cover" src="${hasCover ? cover : bookPlaceholder}" alt="No cover">
+        <img class="favor__book-cover" src="${hasCover ? cover : bookPlaceholder}" style="object-fit:${hasCover ? 'cover' : 'contain'}" alt="No cover">
       </a>
 
       <div class="favor__book-info">

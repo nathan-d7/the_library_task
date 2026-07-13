@@ -33,12 +33,12 @@
   margin-right: 10px;
   width: 70px;
   height: 100px;
-  background-color: #dfdcdc;
+  background-color: var(--bookcover);
   border-radius: 4px;
 }
 
 .favor__book-cover {
-  object-fit: cover;
+  /* object-fit: cover; */
   width: 70px;
   height: 100%;
   border-radius: 4px;
