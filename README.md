@@ -15,7 +15,7 @@ The app features real time book-search, select by author filter, app theme manag
 4. Install the required packages running the command - _**npm install**_
 
 - For development mode use: _**npm run dev**_
-- For production build run: _ **npm run build**_
+- For production build run:  _**npm run build**_
 - To locally preview the final production build: _**npm run preview**_
 
 **Project structure:**
